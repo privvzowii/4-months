@@ -1,1 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4 meses ♡</title>
 
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    background:black;
+    overflow-x:hidden;
+    font-family: 'Arial', sans-serif;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    padding:50px 20px;
+}
+
+h1{
+    font-size:60px;
+    color:#ffd6f6;
+    animation: fade 2s ease;
+}
+
+p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#ff8fd8;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.button:hover{
+    transform:scale(1.1);
+    background:#ff5fc6;
+}
+
+.section{
+    margin-top:120px;
+}
+
+img{
+    width:250px;
+    border-radius:25px;
+    margin-top:20px;
+    box-shadow:0 0 25px pink;
+}
+
+.heart{
+    position:fixed;
+    color:pink;
+    animation: float 5s linear infinite;
+    font-size:20px;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-10vh);
+        opacity:0;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>4 months with you ♡</h1>
+
+<p>
+Gracias por convertirte en mi lugar seguro.
+</p>
+
+<button class="button" onclick="document.getElementById('carta').scrollIntoView({behavior:'smooth'})">
+Abrir carta
+</button>
+
+<div class="section">
+
+<img src="https://i.pinimg.com/736x/f0/68/2e/f0682e2f3dcb90c6b6b73f4d2d68a4d7.jpg">
+
+<p style="margin-top:40px;">
+“even through a screen, you feel close to me.”
+</p>
+
+</div>
+
+<div class="section" id="carta">
+
+<h1 style="font-size:45px;">Para ti ♡</h1>
+
+<p>
+Nunca imaginé que alguien detrás de una pantalla pudiera volverse tan importante para mí.
+<br><br>
+Pero llegaste tú.
+<br><br>
+Y poco a poco te convertiste en una parte preciosa de mis días.
+<br><br>
+Gracias por cada mensaje, cada desvelo y cada momento donde me hiciste sentir querida.
+<br><br>
+Puede que no tengamos fotos juntas, pero tenemos recuerdos, tenemos emociones reales y tenemos esta conexión tan nuestra.
+<br><br>
+Gracias por estos 4 meses.
+<br><br>
+Te amo muchísimo ♡
+</p>
+
+</div>
+
+<div class="section">
+
+<p style="font-size:28px;">
+“home started feeling like you.”
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function createHeart(){
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '♡';
+
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+setInterval(createHeart, 300);
+
+</script>
+
+</body>
+</html>
